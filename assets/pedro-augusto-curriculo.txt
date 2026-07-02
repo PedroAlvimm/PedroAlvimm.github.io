@@ -1,0 +1,82 @@
+Pedro Augusto
+Brasília, DF - Brasil
+Telefone: (61) 98654-2635
+E-mail: pedroreis55alvim@gmail.com
+LinkedIn: https://www.linkedin.com/in/pedro-augusto-23b335199
+GitHub: https://github.com/PedroAlvimm
+
+PERFIL
+Profissional de Educação Física, estudante de Análise e Desenvolvimento de Sistemas, futuro desenvolvedor de software, entusiasta de inteligência artificial e defensor da acessibilidade. Focado em construir soluções que conectam saúde, acessibilidade, dados, IA e engenharia de software.
+
+FORMAÇÃO ACADÊMICA
+Universidade Católica de Brasília (UCB)
+Tecnólogo em Análise e Desenvolvimento de Sistemas - Fev. 2025 - Atual
+Brasília, DF
+Disciplinas: Lógica de Programação, Estruturas de Dados, Modelagem de Banco de Dados, Programação Orientada a Objetos, Fundamentos de Inteligência Artificial, Engenharia de Software, Sistemas Operacionais.
+
+Universidade Católica de Brasília (UCB)
+Bacharelado em Educação Física - Concluído em Dez. 2023
+Brasília, DF
+
+EXPERIÊNCIA
+Vital Record - Profissional de Educação Física
+Jul. 2024 - Atual | Brasília, DF
+- Desenvolvimento de programas individualizados de condicionamento físico e reabilitação.
+- Acompanhamento de desempenho e evolução de alunos.
+- Fortalecimento de habilidades de liderança, adaptação e foco no usuário.
+
+Rede Sarah de Hospitais de Reabilitação - Estagiário em Reabilitação
+Fev. 2023 - Dez. 2023 | Brasília, DF
+- Apoio em programas de reabilitação e acompanhamento funcional de pacientes.
+- Desenvolvimento de habilidades em resolução de problemas, comunicação e trabalho em equipe.
+- Participação em práticas voltadas à acessibilidade e usabilidade.
+
+PROJETOS
+HealthFit Check - Python, IA, Análise de Dados - 2025 - Atual
+- Desenvolvimento de aplicação inteligente voltada ao acompanhamento de saúde e desempenho físico.
+- Estruturação de funcionalidades focadas em recomendações personalizadas e análise de métricas.
+- Estudos envolvendo integração de IA, organização de dados e visualização de desempenho.
+
+Capace+ - Acessibilidade, IA, Inclusão Digital - 2025 - Atual
+- Projeto social voltado à inclusão de pessoas com deficiência no mercado de trabalho.
+- Desenvolvimento de conceito de plataforma com foco em acessibilidade e experiência do usuário.
+- Estudos relacionados a sistemas inteligentes de recomendação e acessibilidade digital.
+
+Gerador de Treinos - Java, Lógica de Programação - 2026
+- Desenvolvimento de aplicação capaz de gerar combinações aleatórias de treinos.
+- Aplicação de lógica de programação, estruturas condicionais e organização de dados.
+- Integração entre desenvolvimento de software e experiência do usuário.
+
+Smart Gym System - Inteligência Artificial, Analytics, UX - 2026
+- Conceito de sistema para análise de fluxo em academia e recomendação inteligente de treinos.
+- Uso de dados operacionais para apoiar decisões de horário, experiência e eficiência.
+
+Agente de Aluguéis - Python, Tkinter, Playwright, Telegram Bot API, CSV/JSON - 2026
+- Automação local para buscar imóveis em fontes configuradas e coletar links de anúncios.
+- Extração de dados, análise de custo-benefício e geração de arquivos CSV com resultados aprovados.
+- Interface em Tkinter para configurar preferências, acompanhar execução e consultar resultados.
+- Envio de alertas pelo Telegram com controle de histórico para evitar notificações repetidas.
+
+Trainly - Python, FastAPI, PostgreSQL, SQLAlchemy, JWT, Pytest - 2026
+- Especificação de MVP para conectar alunos e personal trainers por critérios de compatibilidade.
+- Fundação inicial de API com Python, FastAPI, PostgreSQL, SQLAlchemy 2, Alembic, Pydantic e autenticação JWT.
+- Planejamento de algoritmo de match baseado em objetivo, rotina, orçamento, localização, atendimento e necessidades específicas.
+- Estrutura de qualidade com testes em Pytest, lint/format com Ruff e migrations via Alembic.
+
+COMPETÊNCIAS TÉCNICAS
+Linguagens de Programação: Java, Python, C
+Tecnologias Web: HTML, CSS
+Ferramentas: Git, GitHub, VS Code, Power BI
+Conceitos: POO, Análise de Dados, Bancos de Dados, Fundamentos de IA, Engenharia de Software
+Sistemas Operacionais: Windows
+
+CURSOS E CERTIFICAÇÕES
+- Curso Completo de Java e POO - Udemy - Nelio Alves
+- Curso de Python 3 do básico ao avançado - Udemy - Em andamento
+- Lógica de Programação - Curso em Vídeo
+- Power BI - Fundação Bradesco
+- Engenharia de Projetos - Fundação Bradesco
+
+IDIOMAS
+Português: Nativo
+Inglês: Intermediário
