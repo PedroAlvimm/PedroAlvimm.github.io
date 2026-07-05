@@ -17,6 +17,28 @@
     return ul;
   }
 
+  function assetPath(path) {
+    if (!path || /^(https?:|mailto:|#|data:|\/)/.test(path)) return path;
+    return path.startsWith("../") ? path : `../${path}`;
+  }
+
+  function projectImageFigure(imageData) {
+    const figure = document.createElement("figure");
+    figure.className = "project-gallery-item";
+
+    const image = document.createElement("img");
+    image.src = assetPath(imageData.src);
+    image.alt = imageData.alt || `Print do projeto ${project.title}`;
+    image.loading = "lazy";
+    figure.append(image);
+
+    if (imageData.caption) {
+      figure.append(text("figcaption", imageData.caption));
+    }
+
+    return figure;
+  }
+
   function section(title, content) {
     const wrapper = document.createElement("section");
     wrapper.append(text("h2", title));
@@ -52,6 +74,17 @@
     hero.append(text("p", "Projeto", "eyebrow"));
     hero.append(text("h1", project.title));
     hero.append(text("p", project.description));
+
+    if (project.cover) {
+      const cover = document.createElement("figure");
+      cover.className = "project-detail-cover";
+      const coverImage = document.createElement("img");
+      coverImage.src = assetPath(project.cover);
+      coverImage.alt = `Prévia visual do projeto ${project.title}`;
+      coverImage.loading = "eager";
+      cover.append(coverImage);
+      hero.append(cover);
+    }
 
     const grid = document.createElement("div");
     grid.className = "project-detail-grid";
@@ -98,11 +131,21 @@
     }
     sidePanel.append(section("Links", links));
 
-    const images = text("p", "Prints e imagens do projeto podem ser adicionados quando existirem.");
-    sidePanel.append(section("Imagens ou prints", images));
-
     grid.append(mainPanel, sidePanel);
     root.append(hero, grid);
+
+    if (Array.isArray(project.images) && project.images.length) {
+      const gallerySection = document.createElement("section");
+      gallerySection.className = "project-detail-panel project-gallery-section";
+      gallerySection.append(text("h2", "Imagens do MVP"));
+
+      const gallery = document.createElement("div");
+      gallery.className = "project-gallery";
+      project.images.forEach((imageData) => gallery.append(projectImageFigure(imageData)));
+
+      gallerySection.append(gallery);
+      root.append(gallerySection);
+    }
   }
 
   if (!root) return;

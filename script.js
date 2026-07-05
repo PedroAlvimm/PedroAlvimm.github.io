@@ -23,6 +23,18 @@ function renderProjects() {
       article.rel = "noreferrer";
       article.setAttribute("aria-label", `Abrir detalhes do projeto ${project.title}`);
 
+      if (project.cover) {
+        article.classList.add("has-cover");
+        const media = document.createElement("div");
+        media.className = "project-card-media";
+        const image = document.createElement("img");
+        image.src = project.cover;
+        image.alt = `Prévia visual do projeto ${project.title}`;
+        image.loading = "lazy";
+        media.append(image);
+        article.append(media);
+      }
+
       appendTextElement(article, "div", String(index + 1).padStart(2, "0"), "project-index");
       appendTextElement(article, "h3", project.title);
       appendTextElement(article, "p", project.description);
@@ -103,22 +115,28 @@ const sections = navLinks
   .map((link) => document.getElementById(link.dataset.nav))
   .filter(Boolean);
 const menuButton = document.querySelector(".menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
+const sidebarNavigation = document.getElementById("sidebar-navigation");
 
-function closeMobileMenu() {
+function closeNavigation() {
   document.body.classList.remove("menu-open");
   menuButton?.setAttribute("aria-expanded", "false");
-  mobileMenu?.setAttribute("aria-hidden", "true");
+  sidebarNavigation?.setAttribute("aria-hidden", "true");
 }
 
 menuButton?.addEventListener("click", () => {
   const isOpen = document.body.classList.toggle("menu-open");
   menuButton.setAttribute("aria-expanded", String(isOpen));
-  mobileMenu?.setAttribute("aria-hidden", String(!isOpen));
+  sidebarNavigation?.setAttribute("aria-hidden", String(!isOpen));
 });
 
-document.querySelectorAll(".mobile-menu a").forEach((link) => {
-  link.addEventListener("click", closeMobileMenu);
+document.querySelectorAll(".sidebar a").forEach((link) => {
+  link.addEventListener("click", closeNavigation);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeNavigation();
+  }
 });
 
 const activeObserver = new IntersectionObserver(

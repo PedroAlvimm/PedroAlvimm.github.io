@@ -12,7 +12,7 @@ FORMAÇÃO ACADÊMICA
 Universidade Católica de Brasília (UCB)
 Tecnólogo em Análise e Desenvolvimento de Sistemas - Fev. 2025 - Atual
 Brasília, DF
-Disciplinas: Lógica de Programação, Estruturas de Dados, Modelagem de Banco de Dados, Programação Orientada a Objetos, Fundamentos de Inteligência Artificial, Engenharia de Software, Sistemas Operacionais.
+Disciplinas: Estruturas de Dados, Modelagem de Banco de Dados, Programação Orientada a Objetos, Fundamentos de Inteligência Artificial, Engenharia de Software, Sistemas Operacionais.
 
 Universidade Católica de Brasília (UCB)
 Bacharelado em Educação Física - Concluído em Dez. 2023
