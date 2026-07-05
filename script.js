@@ -16,8 +16,12 @@ function renderProjects() {
 
   container.replaceChildren(
     ...data.projects.map((project, index) => {
-      const article = document.createElement("article");
-      article.className = "project-card reveal";
+      const article = document.createElement("a");
+      article.className = "project-card project-link reveal";
+      article.href = `projetos/${project.slug}.html`;
+      article.target = "_blank";
+      article.rel = "noreferrer";
+      article.setAttribute("aria-label", `Abrir detalhes do projeto ${project.title}`);
 
       appendTextElement(article, "div", String(index + 1).padStart(2, "0"), "project-index");
       appendTextElement(article, "h3", project.title);
@@ -30,6 +34,7 @@ function renderProjects() {
         appendTextElement(techList, "span", technology);
       });
       article.append(techList);
+      appendTextElement(article, "span", "Ver detalhes", "project-cta");
 
       return article;
     }),
