@@ -276,7 +276,7 @@ svg {
   left: 0.75rem;
   z-index: 60;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   gap: 0.85rem;
   border: 1px solid var(--border);
@@ -288,18 +288,27 @@ svg {
 }
 
 .brand.compact {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
   min-width: 0;
+  margin-left: 3.35rem;
+}
+
+.menu-button {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
 }
 
 .top-socials {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.45rem;
-  position: absolute;
-  top: 0.65rem;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .top-socials a {
@@ -1138,12 +1147,21 @@ h3 {
 }
 
 .project-detail-shell {
-  width: min(100% - 2rem, var(--content));
+  display: grid;
+  justify-items: center;
+  width: 100%;
   margin-inline: auto;
-  padding: 2rem 0 5rem;
+  padding: 2rem 1rem 5rem;
+}
+
+.project-detail-shell > #project-detail {
+  display: grid;
+  justify-items: center;
+  width: 100%;
 }
 
 .detail-back {
+  justify-self: center;
   display: inline-flex;
   width: max-content;
   margin-bottom: 2rem;
@@ -1158,6 +1176,7 @@ h3 {
 .project-detail-hero {
   display: grid;
   justify-items: center;
+  width: 100%;
   gap: 1rem;
   text-align: center;
   padding: 4.5rem 0 2rem;
@@ -1178,6 +1197,7 @@ h3 {
 
 .project-detail-cover {
   overflow: hidden;
+  width: min(100%, 960px);
   max-width: 960px;
   margin-inline: auto;
   margin-top: 0.85rem;
@@ -1195,18 +1215,23 @@ h3 {
 
 .project-detail-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.44fr);
+  width: min(100%, 960px);
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-items: start;
+  justify-items: center;
+  margin-inline: auto;
 }
 
 .project-detail-panel,
 .project-side-panel {
+  width: 100%;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: linear-gradient(180deg, var(--card-strong), rgba(255, 255, 255, 0.028));
   box-shadow: 0 24px 80px var(--shadow);
   padding: 1.35rem;
+  text-align: center;
 }
 
 .project-detail-panel {
@@ -1229,8 +1254,14 @@ h3 {
 .project-detail-panel ul {
   display: grid;
   gap: 0.55rem;
-  margin: 0;
-  padding-left: 1.1rem;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.project-detail-panel li {
+  text-align: center;
 }
 
 .project-readme {
@@ -1241,10 +1272,12 @@ h3 {
   background: rgba(0, 0, 0, 0.22);
   color: var(--muted);
   padding: 1rem;
+  text-align: left;
   white-space: pre-wrap;
 }
 
 .project-gallery-section {
+  width: min(100%, 1040px);
   margin-top: 1rem;
 }
 
@@ -1280,14 +1313,21 @@ h3 {
 .project-side-panel {
   display: grid;
   gap: 1rem;
+  justify-items: center;
+}
+
+.project-side-panel .tech-list {
+  justify-content: center;
 }
 
 .project-link-list {
   display: grid;
+  justify-items: center;
   gap: 0.65rem;
 }
 
 .project-link-list a {
+  width: min(100%, 20rem);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.045);
@@ -1425,10 +1465,20 @@ h3 {
     gap: 0.55rem;
   }
 
+  .menu-button {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .brand.compact {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 0;
+  }
+
   .top-socials {
-    position: static;
-    transform: none;
     grid-column: 1 / -1;
+    grid-row: 2;
     justify-content: stretch;
     width: 100%;
   }
