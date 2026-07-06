@@ -1230,50 +1230,74 @@ h3 {
   border-radius: var(--radius);
   background: linear-gradient(180deg, var(--card-strong), rgba(255, 255, 255, 0.028));
   box-shadow: 0 24px 80px var(--shadow);
-  padding: 1.35rem;
+  padding: 1.65rem;
   text-align: center;
 }
 
 .project-detail-panel {
   display: grid;
-  gap: 1.25rem;
+  justify-items: center;
+  gap: 1.55rem;
+}
+
+.project-detail-panel > section,
+.project-side-panel > section {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 820px);
+  margin-inline: auto;
+  text-align: center;
 }
 
 .project-detail-panel h2,
 .project-side-panel h2 {
-  margin-bottom: 0.85rem;
+  width: 100%;
+  margin: 0 auto 0.85rem;
   font-size: 1.15rem;
+  text-align: center;
 }
 
 .project-detail-panel p,
 .project-detail-panel li,
 .project-side-panel p {
+  width: min(100%, 760px);
+  margin-inline: auto;
   color: var(--subtle);
+  text-align: center;
 }
 
 .project-detail-panel ul {
   display: grid;
-  gap: 0.55rem;
-  max-width: 760px;
+  justify-items: center;
+  width: min(100%, 760px);
+  gap: 0.65rem;
   margin: 0 auto;
   padding-left: 0;
-  list-style-position: inside;
+  list-style: none;
 }
 
 .project-detail-panel li {
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.026);
+  padding: 0.7rem 0.9rem;
   text-align: center;
 }
 
 .project-readme {
   overflow: auto;
+  width: min(100%, 820px);
   max-height: 420px;
+  margin-inline: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: rgba(0, 0, 0, 0.22);
   color: var(--muted);
   padding: 1rem;
-  text-align: left;
+  text-align: center;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.75;
 }
 
 .project-gallery-section {
