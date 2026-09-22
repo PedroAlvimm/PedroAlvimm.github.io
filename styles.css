@@ -1213,6 +1213,20 @@ h3 {
   height: auto;
 }
 
+.project-detail-cover.is-portrait {
+  width: min(100%, 520px);
+}
+
+.project-detail-cover.is-portrait img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.project-detail-cover.is-wide img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .project-detail-grid {
   display: grid;
   width: min(100%, 960px);
@@ -1325,6 +1339,14 @@ h3 {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top center;
+}
+
+.project-gallery-item.is-portrait img {
+  aspect-ratio: 4 / 5;
+}
+
+.project-gallery-item.is-wide img {
+  aspect-ratio: 16 / 9;
 }
 
 .project-gallery-item figcaption {

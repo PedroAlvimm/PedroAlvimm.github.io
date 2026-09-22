@@ -25,6 +25,7 @@
   function projectImageFigure(imageData) {
     const figure = document.createElement("figure");
     figure.className = "project-gallery-item";
+    if (imageData.variant) figure.classList.add(`is-${imageData.variant}`);
 
     const image = document.createElement("img");
     image.src = assetPath(imageData.src);
@@ -78,6 +79,7 @@
     if (project.cover) {
       const cover = document.createElement("figure");
       cover.className = "project-detail-cover";
+      if (project.coverVariant) cover.classList.add(`is-${project.coverVariant}`);
       const coverImage = document.createElement("img");
       coverImage.src = assetPath(project.cover);
       coverImage.alt = `Prévia visual do projeto ${project.title}`;

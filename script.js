@@ -179,12 +179,17 @@ const assistantKnowledge = [
   {
     match: ["quem", "pedro", "sobre", "who", "about"],
     answer:
-      "Pedro Augusto é profissional de Educação Física em Brasília, DF, e atualmente estuda Análise e Desenvolvimento de Sistemas. Sua direção combina saúde, acessibilidade, IA, dados e engenharia de software.",
+      "Pedro Augusto é profissional de Educação Física em Brasília, DF, estudante de Análise e Desenvolvimento de Sistemas, residente em IA e pós-graduando em Ciência de Dados e Inteligência Artificial. Sua direção combina saúde, acessibilidade, IA, dados e engenharia de software.",
   },
   {
     match: ["tecnologias", "estuda", "stack", "habilidades", "technologies", "studying", "skills"],
     answer:
-      "Pedro estuda Java, Python e C como linguagens de programação, além de HTML e CSS como tecnologias web. Também estuda lógica de programação, POO, bancos de dados, análise de dados, fundamentos de IA, engenharia de software e sistemas operacionais.",
+      "Pedro estuda Java, Python e C como linguagens de programação, além de HTML e CSS como tecnologias web. Também aprofunda IA, machine learning, ciência de dados, análise de dados, POO, bancos de dados, engenharia de software e sistemas operacionais.",
+  },
+  {
+    match: ["formação", "formacao", "faculdade", "mba", "residência", "residencia", "unb", "eldorado"],
+    answer:
+      "Na formação, Pedro está em Análise e Desenvolvimento de Sistemas pela UCB, participa da Residência em IA Brasília realizada pelo Instituto ELDORADO em parceria com a UnB, PBIA/MCTI e Softex, e cursa MBA em Ciência de Dados e Inteligência Artificial.",
   },
   {
     match: ["projetos", "construiu", "portfolio", "portfólio", "projects", "built"],
@@ -199,6 +204,16 @@ const assistantKnowledge = [
     match: ["trainly", "personal", "trainer", "match", "fastapi", "postgresql"],
     answer:
       "Trainly é uma plataforma para conectar alunos a personal trainers por compatibilidade de objetivo, rotina, orçamento, localização, modalidade de atendimento e necessidades específicas. A stack planejada inclui Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Pydantic, JWT e Pytest.",
+  },
+  {
+    match: ["pulseflow", "spotify", "musica", "música", "kmeans", "dbscan"],
+    answer:
+      "PulseFlow é um conceito de produto que usa dados musicais, contexto e sinais biométricos para adaptar recomendações ao momento do usuário. O projeto combinou análise de mais de 114 mil faixas, pesquisa com usuários, modelos supervisionados, KMeans, DBSCAN e decisões de UX.",
+  },
+  {
+    match: ["detetives", "dados", "faltas", "nota", "pearson", "iqr"],
+    answer:
+      "Detetives dos Dados é um case de análise sobre estudantes, faltas e desempenho. O projeto investigou qualidade de dados, outliers, correlação de Pearson, variável oculta e risco de viés, reduzindo 247 possibilidades a 7 perguntas orientadoras baseadas em evidências.",
   },
   {
     match: ["trajetória", "experiência", "saúde", "reabilitação", "background", "experience", "health", "rehabilitation"],

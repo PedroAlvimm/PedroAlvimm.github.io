@@ -6,9 +6,19 @@ LinkedIn: https://www.linkedin.com/in/pedro-augusto-23b335199
 GitHub: https://github.com/PedroAlvimm
 
 PERFIL
-Profissional de Educação Física, estudante de Análise e Desenvolvimento de Sistemas, futuro desenvolvedor de software, entusiasta de inteligência artificial e defensor da acessibilidade. Focado em construir soluções que conectam saúde, acessibilidade, dados, IA e engenharia de software.
+Profissional de Educação Física, estudante de Análise e Desenvolvimento de Sistemas, residente em IA e pós-graduando em Ciência de Dados e Inteligência Artificial. Entusiasta de inteligência artificial e defensor da acessibilidade, focado em construir soluções que conectam saúde, acessibilidade, dados, IA e engenharia de software.
 
 FORMAÇÃO ACADÊMICA
+Instituto ELDORADO, Universidade de Brasília (UnB), PBIA/MCTI e Softex
+Residência em IA Brasília - 2026 - Atual
+Brasília, DF
+Disciplinas: Inteligência Artificial, Machine Learning, Análise de Dados, Projetos reais com mentoria, Aplicação prática de IA.
+
+Pós-graduação em andamento
+MBA em Ciência de Dados e Inteligência Artificial - 2026 - Atual
+Brasil
+Disciplinas: Machine Learning, Data Science, Estatística e Probabilidade, Bancos de Dados, Deep Learning, IA Generativa, Governança de Dados e IA, Liderança de projetos de dados.
+
 Universidade Católica de Brasília (UCB)
 Tecnólogo em Análise e Desenvolvimento de Sistemas - Fev. 2025 - Atual
 Brasília, DF
@@ -36,6 +46,16 @@ HealthFit Check - Python, IA, Análise de Dados - 2025 - Atual
 - Desenvolvimento de aplicação inteligente voltada ao acompanhamento de saúde e desempenho físico.
 - Estruturação de funcionalidades focadas em recomendações personalizadas e análise de métricas.
 - Estudos envolvendo integração de IA, organização de dados e visualização de desempenho.
+
+PulseFlow - Análise de Dados, Machine Learning, UX, Product Design - 2026
+- Projeto em grupo combinando análise de dados, machine learning, pesquisa de usuários e prototipação de produto.
+- Exploração de mais de 114 mil faixas do Spotify Dataset, com testes supervisionados, KMeans e DBSCAN.
+- Transformação dos resultados em decisões de produto para recomendação musical adaptativa por contexto.
+
+Detetives dos Dados - Análise de Dados, Estatística, IQR, Pearson - 2026
+- Investigação de uma base de estudantes com foco em faltas, desempenho, qualidade dos dados e variável oculta.
+- Tratamento de dados inconsistentes, ausentes e duplicados, reduzindo a base demonstrativa para 25 registros válidos.
+- Uso de correlação de Pearson, IQR e matriz de priorização para chegar a 7 perguntas orientadoras sustentadas por evidências.
 
 Capace+ - Acessibilidade, IA, Inclusão Digital - 2025 - Atual
 - Projeto social voltado à inclusão de pessoas com deficiência no mercado de trabalho.
