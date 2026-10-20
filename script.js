@@ -1,3 +1,5 @@
+(async function () {
+  await import("./assets/batalha-naval-data.js?v=20261020-batalha-naval-1").catch(console.error);
 document.documentElement.classList.add("has-js");
 
 const data = window.portfolioData || {};
@@ -344,3 +346,5 @@ contactForm?.addEventListener("submit", async (event) => {
   if (formStatus) formStatus.textContent = "Mensagem preparada. Pedro pode conectar este formulário a um backend depois.";
   form.reset();
 });
+
+})();

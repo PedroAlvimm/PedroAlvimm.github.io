@@ -139,7 +139,7 @@
     if (Array.isArray(project.images) && project.images.length) {
       const gallerySection = document.createElement("section");
       gallerySection.className = "project-detail-panel project-gallery-section";
-      gallerySection.append(text("h2", "Imagens do MVP"));
+      gallerySection.append(text("h2", project.galleryTitle || "Imagens do MVP"));
 
       const gallery = document.createElement("div");
       gallery.className = "project-gallery";
