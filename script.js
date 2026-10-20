@@ -1,5 +1,5 @@
 (async function () {
-  await import("./assets/batalha-naval-data.js?v=20261020-batalha-naval-1").catch(console.error);
+  await import("./assets/batalha-naval-data.js?v=20261020-terminal-1").catch(console.error);
 document.documentElement.classList.add("has-js");
 
 const data = window.portfolioData || {};
