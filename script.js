@@ -1,5 +1,6 @@
 (async function () {
   await import("./assets/batalha-naval-data.js?v=20261020-terminal-1").catch(console.error);
+  await import("./assets/apura-data.js?v=20261031-apura-1").catch(console.error);
 document.documentElement.classList.add("has-js");
 
 const data = window.portfolioData || {};
@@ -29,6 +30,7 @@ function renderProjects() {
         article.classList.add("has-cover");
         const media = document.createElement("div");
         media.className = "project-card-media";
+        if (project.coverVariant === "brand") media.classList.add("is-brand");
         const image = document.createElement("img");
         image.src = project.cover;
         image.alt = `Prévia visual do projeto ${project.title}`;

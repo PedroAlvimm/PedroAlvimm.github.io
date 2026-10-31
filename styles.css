@@ -1227,6 +1227,23 @@ h3 {
   object-fit: cover;
 }
 
+.project-card-media.is-brand,
+.project-detail-cover.is-brand {
+  background: #f5f3ec;
+}
+
+.project-card-media.is-brand img {
+  object-fit: contain;
+  object-position: center;
+  padding: 1.5rem;
+}
+
+.project-detail-cover.is-brand img {
+  height: clamp(220px, 28vw, 320px);
+  object-fit: contain;
+  padding: 2rem;
+}
+
 .project-detail-grid {
   display: grid;
   width: min(100%, 960px);

@@ -1,0 +1,66 @@
+(function () {
+  const projects = window.portfolioData?.projects;
+  if (!Array.isArray(projects) || projects.some((project) => project.slug === "apura")) return;
+
+  projects.unshift({
+    title: "APURA",
+    slug: "apura",
+    period: "2026",
+    technologies: ["Python", "BERTimbau", "React", "Django REST Framework", "PostgreSQL", "Docker"],
+    goal:
+      "Apoiar a leitura crítica de notícias e alegações em português, reunindo sinais textuais, contexto e fontes para orientar uma decisão mais consciente antes de compartilhar.",
+    description:
+      "Projeto em equipe da Residência em Inteligência Artificial: plataforma para analisar textos e links com BERTimbau, consulta a checagens externas e relatório explicativo com índice de risco e tratamento de incerteza.",
+    cover: "assets/projects/apura/apura-mark.png",
+    coverVariant: "brand",
+    github: "https://github.com/aqela-batata-alt/verificAI",
+    features: [
+      "Entrada por texto ou URL, com extração do conteúdo da página e validação contra SSRF.",
+      "Classificação com BERTimbau V4: título, subtítulo e corpo separados por tokens especiais; textos longos divididos em janelas sobrepostas e probabilidades agregadas.",
+      "Busca de checagens via Google Fact Check e fontes alternativas, distinguindo referências compatíveis, conflitantes e apenas contextuais.",
+      "Relatório com índice de risco, sinais linguísticos, explicação, fontes e detalhes técnicos. Baixa confiança ou discordância entre trechos pode gerar análise inconclusiva.",
+      "Síntese por provedores de IA quando configurados, com validação de resposta e alternativa local determinística para indisponibilidade dos serviços.",
+      "Proteção de dados com mascaramento de padrões de informações pessoais, persistência sem o texto integral e rastreabilidade das versões do modelo, das regras e do código.",
+      "Testes automatizados de API, classificação, pré-processamento, risco, privacidade e prazos; testes da interface com Vitest, Testing Library e verificações de acessibilidade.",
+    ],
+    bullets: [
+      "Projeto colaborativo que integra processamento de linguagem natural e desenvolvimento web.",
+      "Comunicação de incerteza e fontes para apoiar a avaliação humana.",
+    ],
+    readme: [
+      "# APURA — apoio à avaliação de notícias",
+      "",
+      "## Contexto",
+      "Projeto desenvolvido em equipe no contexto da Residência em Inteligência Artificial. O nome do produto é APURA; o repositório mantém o identificador verificAI.",
+      "",
+      "## Problema e proposta",
+      "A circulação rápida de informações exige ferramentas que ajudem a examinar o conteúdo antes de compartilhar. O APURA combina análise textual, consulta a fontes e explicações para apoiar essa leitura crítica.",
+      "",
+      "## Fluxo de análise",
+      "Texto ou link → validação e extração → normalização e divisão em trechos → BERTimbau → indicadores linguísticos e busca de checagens → síntese explicativa → índice de risco ou abstenção → resultado persistido.",
+      "",
+      "## Arquitetura",
+      "React e Vite na interface; Nginx para servir o frontend e encaminhar a API; Django REST Framework no backend; PostgreSQL na configuração Docker Compose; BERTimbau e Transformers no processamento de linguagem natural.",
+      "",
+      "## Decisões técnicas",
+      "- Preservação de título e subtítulo nas janelas do modelo com separadores [SEP].",
+      "- Agregação das probabilidades e avaliação da discordância entre trechos.",
+      "- Índice que combina modelo, indicadores linguísticos e conflito com checagens, com normalização dos pesos quando sinais estão ausentes.",
+      "- Abstenção diante de confiança insuficiente ou trechos com previsões conflitantes.",
+      "- Fontes contextuais aparecem como referência, sem serem tratadas como evidência factual confirmada.",
+      "- Limites de tempo, validação das respostas de IA e alternativa local para manter o fluxo de explicação.",
+      "",
+      "## Qualidade e privacidade",
+      "O repositório inclui testes de backend e frontend. A análise usa o texto integral em memória, enquanto a persistência evita armazená-lo como campo do registro. O mascaramento de dados pessoais é baseado em padrões e possui limitações.",
+      "",
+      "## Estágio do projeto",
+      "MVP com análise por texto e URL. Cadastro, login, recuperação de acesso, exclusão de conta e feedback estão em demonstração na interface; histórico sincronizado e outras evoluções dependem de integração adicional. Pesos e limiares do índice são provisórios, e a confiança ainda precisa de calibração independente.",
+      "",
+      "## Limite da interpretação",
+      "O índice de risco não é a probabilidade de uma notícia ser falsa nem uma comprovação factual. O resultado é apoio à avaliação e deve ser acompanhado da consulta às fontes originais.",
+      "",
+      "## Material visual",
+      "A capa utiliza a marca original presente em frontend/src/assets/apura-mark.png. O repositório consultado não inclui capturas da interface.",
+    ].join("\n"),
+  });
+})();
