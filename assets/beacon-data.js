@@ -39,12 +39,6 @@
         caption: "O ambiente do BB Digital Week 2026, em Brasília.",
         variant: "portrait",
       },
-      {
-        src: "assets/projects/beacon/hackathon.jpeg",
-        alt: "Participantes reunidos diante do espaço do hackathon",
-        caption: "Hackathon: três dias de ideias, decisões e colaboração.",
-        variant: "portrait",
-      },
     ],
     sections: [
       {
