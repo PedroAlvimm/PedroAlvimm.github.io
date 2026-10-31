@@ -144,9 +144,17 @@
       demo.href = project.demo;
       demo.target = "_blank";
       demo.rel = "noreferrer";
-      demo.textContent = "Demonstração";
+      demo.textContent = project.demoLabel || "Demonstração";
       links.append(demo);
     }
+    (project.documents || []).forEach((documentData) => {
+      const documentLink = document.createElement("a");
+      documentLink.href = assetPath(documentData.href);
+      documentLink.target = "_blank";
+      documentLink.rel = "noreferrer";
+      documentLink.textContent = documentData.label;
+      links.append(documentLink);
+    });
     if (!links.children.length) {
       links.append(text("p", "Links externos serão adicionados quando o repositório ou a demonstração estiverem disponíveis."));
     }
@@ -158,15 +166,15 @@
     if (project.video) {
       const videoSection = document.createElement("section");
       videoSection.className = "project-detail-panel project-video-section";
-      videoSection.append(text("p", "Apresentação do Grupo 8 · 5 min 17 s", "eyebrow"));
-      videoSection.append(text("h2", "Conheça o APURA"));
-      videoSection.append(text("p", "Assista à apresentação da equipe e conheça a proposta, a solução e sua demonstração."));
+      videoSection.append(text("p", project.video.eyebrow || "Apresentação do Grupo 8 · 5 min 17 s", "eyebrow"));
+      videoSection.append(text("h2", project.video.title || "Conheça o APURA"));
+      videoSection.append(text("p", project.video.description || "Assista à apresentação da equipe e conheça a proposta, a solução e sua demonstração."));
       const video = document.createElement("video");
       video.controls = true;
       video.preload = "metadata";
       video.playsInline = true;
-      video.poster = assetPath(project.video.poster);
-      video.setAttribute("aria-label", "Apresentação final do APURA pelo Grupo 8");
+      if (project.video.poster) video.poster = assetPath(project.video.poster);
+      video.setAttribute("aria-label", project.video.ariaLabel || `Vídeo do projeto ${project.title}`);
       const source = document.createElement("source");
       source.src = assetPath(project.video.src);
       source.type = "video/mp4";
@@ -191,6 +199,7 @@
       const gallery = document.createElement("div");
       gallery.className = "project-gallery";
       if (project.galleryLayout === "diagrams") gallery.classList.add("is-diagrams");
+      if (project.galleryLayout === "photos") gallery.classList.add("is-photos");
       project.images.forEach((imageData) => gallery.append(projectImageFigure(imageData)));
 
       gallerySection.append(gallery);
