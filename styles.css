@@ -1332,6 +1332,8 @@ h3 {
 }
 
 .project-story section,
+.project-story h2,
+.project-story p,
 .project-story li {
   text-align: left;
 }
