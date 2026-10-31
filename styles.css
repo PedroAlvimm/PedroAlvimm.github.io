@@ -1331,6 +1331,59 @@ h3 {
   line-height: 1.75;
 }
 
+.project-story section,
+.project-story li {
+  text-align: left;
+}
+
+.project-story section + section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-story p {
+  max-width: 74ch;
+  line-height: 1.8;
+}
+
+.project-video-section {
+  width: min(100%, 1040px);
+  margin: 0 auto 1.5rem;
+}
+
+.project-video-section video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1.25rem 0;
+  border-radius: var(--radius);
+  background: #080d18;
+}
+
+.project-video-section a {
+  display: inline-block;
+  padding: 0.6rem 0;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.project-gallery.is-diagrams {
+  grid-template-columns: 1fr;
+}
+
+.project-gallery.is-diagrams img {
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: white;
+}
+
+.project-gallery.is-diagrams a {
+  display: block;
+  cursor: zoom-in;
+}
+
 .project-gallery-section {
   width: min(100%, 1040px);
   margin-top: 1rem;

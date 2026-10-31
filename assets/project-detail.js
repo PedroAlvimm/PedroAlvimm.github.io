@@ -31,7 +31,17 @@
     image.src = assetPath(imageData.src);
     image.alt = imageData.alt || `Print do projeto ${project.title}`;
     image.loading = "lazy";
-    figure.append(image);
+    if (imageData.expandable) {
+      const link = document.createElement("a");
+      link.href = assetPath(imageData.src);
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.setAttribute("aria-label", `Ampliar: ${image.alt}`);
+      link.append(image);
+      figure.append(link);
+    } else {
+      figure.append(image);
+    }
 
     if (imageData.caption) {
       figure.append(text("figcaption", imageData.caption));
@@ -76,7 +86,7 @@
     hero.append(text("h1", project.title));
     hero.append(text("p", project.description));
 
-    if (project.cover) {
+    if (project.cover && !project.hideDetailCover) {
       const cover = document.createElement("figure");
       cover.className = "project-detail-cover";
       if (project.coverVariant) cover.classList.add(`is-${project.coverVariant}`);
@@ -94,12 +104,21 @@
     const mainPanel = document.createElement("article");
     mainPanel.className = "project-detail-panel";
     mainPanel.append(section("Objetivo", text("p", project.goal || project.description)));
-    mainPanel.append(section("Funcionalidades", list(project.features || project.bullets || [])));
-
-    const readme = document.createElement("pre");
-    readme.className = "project-readme";
-    readme.textContent = buildReadme(project);
-    mainPanel.append(section("README / base disponível", readme));
+    if (Array.isArray(project.sections)) {
+      mainPanel.classList.add("project-story");
+      project.sections.forEach((item) => {
+        const content = document.createElement("div");
+        if (item.text) content.append(text("p", item.text));
+        if (item.items?.length) content.append(list(item.items));
+        mainPanel.append(section(item.title, content));
+      });
+    } else {
+      mainPanel.append(section("Funcionalidades", list(project.features || project.bullets || [])));
+      const readme = document.createElement("pre");
+      readme.className = "project-readme";
+      readme.textContent = buildReadme(project);
+      mainPanel.append(section("README / base disponível", readme));
+    }
 
     const sidePanel = document.createElement("aside");
     sidePanel.className = "project-side-panel";
@@ -134,7 +153,35 @@
     sidePanel.append(section("Links", links));
 
     grid.append(mainPanel, sidePanel);
-    root.append(hero, grid);
+    root.append(hero);
+
+    if (project.video) {
+      const videoSection = document.createElement("section");
+      videoSection.className = "project-detail-panel project-video-section";
+      videoSection.append(text("p", "Apresentação do Grupo 8 · 5 min 17 s", "eyebrow"));
+      videoSection.append(text("h2", "Conheça o APURA"));
+      videoSection.append(text("p", "Assista à apresentação da equipe e conheça a proposta, a solução e sua demonstração."));
+      const video = document.createElement("video");
+      video.controls = true;
+      video.preload = "metadata";
+      video.playsInline = true;
+      video.poster = assetPath(project.video.poster);
+      video.setAttribute("aria-label", "Apresentação final do APURA pelo Grupo 8");
+      const source = document.createElement("source");
+      source.src = assetPath(project.video.src);
+      source.type = "video/mp4";
+      video.append(source);
+      videoSection.append(video);
+      const directLink = document.createElement("a");
+      directLink.href = assetPath(project.video.src);
+      directLink.textContent = "Abrir o vídeo em uma nova aba";
+      directLink.target = "_blank";
+      directLink.rel = "noreferrer";
+      videoSection.append(directLink);
+      root.append(videoSection);
+    }
+
+    root.append(grid);
 
     if (Array.isArray(project.images) && project.images.length) {
       const gallerySection = document.createElement("section");
@@ -143,6 +190,7 @@
 
       const gallery = document.createElement("div");
       gallery.className = "project-gallery";
+      if (project.galleryLayout === "diagrams") gallery.classList.add("is-diagrams");
       project.images.forEach((imageData) => gallery.append(projectImageFigure(imageData)));
 
       gallerySection.append(gallery);
